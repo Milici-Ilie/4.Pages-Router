@@ -540,13 +540,58 @@
 
                                                                                     ❗❗❗🌠🌠[DYNAMIC ROUTES]🌠🌠❗❗❗
 
-    ## ✅III. subtitlu
+    ## ✅III. -Adding Catch-All Routes
 
-    ## ✅IV. subtitlu
+[PAGES/BLOG/...slug.js]/
 
-    ## ✅V. subtitlu
+                                                                                    ❗❗❗📍📍[CATCH-ALL ROUTES]📍📍❗❗❗
 
-    ## ✅VI. subtitlu
+    ## ✅IV. -Navigating with the "Link" Component
+              -How to connect pages with "Link" Component
+              -How to create a dynamic Data-Base from where we can take auttomatically data without hard coding
+
+> We use "Link" Component to have the advantage of a SPA
+
+[PAGES/index.js]/[PAGES/CLIENTS/index.js]
+
+function ClientsPage() {
+const clients = [
+{ id: "mci-ilie", name: "Milici Ilie" },
+{ id: "mci-roxana", name: "Milici Roxana" },
+{ id: "mci-luca", name: "Milici Luca" },
+{ id: "mci-david", name: "Milici David" },
+];
+
+return (
+
+<div>
+<h1>The Clients Page!</h1>
+<ul>
+{clients.map((client) => (
+<li key={client.id}>
+<Link href={`/clients/${client.id}`}>{client.name}</Link>
+</li>
+))}
+</ul>
+</div>
+
+...another alternative for the <Link href={{pathname: "/client/[id]", query: {id: client.id}}}>
+
+                                                                                    ❗❗❗🔗🔗[LINK NAVIGATION]🔗🔗❗❗❗
+
+    ## ✅V. -Navigating Programmatically
+
+> How to create a Button that take us to another page instantly when is pressed
+
+[PAGES/CLIENTS/ID/index.js]
+
+                                                                               ❗❗❗🔘🔘[Navigating Programmatically]🔘🔘❗❗❗
+
+    ## ✅VI. -Adding an Error page/ 404 page
+
+> For this to work we must create a file named [404.js], NextJS will find this page immediatly thanks to it's name when there will be founded an error 404 not found, and in this file we can customize/display whatever message we want
+
+[PAGES/404.js]
 
     ## ✅VII. subtitlu
 
